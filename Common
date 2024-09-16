@@ -1,0 +1,6 @@
+public class Common {
+    // Phương thức kiểm tra số nguyên dương
+    public static boolean isPositive(int value) {
+        return value > 0;
+    }
+}

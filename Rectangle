@@ -1,0 +1,54 @@
+
+public class Rectangle {
+    private int width;
+    private int height;
+
+    public Rectangle(int width, int height) {
+        if (Common.isPositive(width) && Common.isPositive(height)) {
+            this.width = width;
+            this.height = height;
+        } else {
+            throw new IllegalArgumentException("Width and height must be positive integers.");
+        }
+    }
+
+    public int getPerimeter() {
+        return 2 * (width + height);
+    }
+
+    public int getArea() {
+        return width * height;
+    }
+
+    // Getter và Setter cho width
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        if (Common.isPositive(width)) {
+            this.width = width;
+        } else {
+            throw new IllegalArgumentException("Width must be a positive integer.");
+        }
+    }
+
+    // Getter và Setter cho height
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        if (Common.isPositive(height)) {
+            this.height = height;
+        } else {
+            throw new IllegalArgumentException("Height must be a positive integer.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("Chu vi hình chữ nhật: " + rectangle.getPerimeter());
+        System.out.println("Diện tích hình chữ nhật: " + rectangle.getArea());
+    }
+}
